@@ -5,8 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/cyberpunk-avatar-portal/", // 
-  
+  base: "/cyberpunk-avatar-portal/", // Replace 'your-repo-name' with your GitHub repository name
   server: {
     host: "::",
     port: 8080,
