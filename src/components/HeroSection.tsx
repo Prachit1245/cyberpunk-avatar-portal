@@ -42,11 +42,11 @@ const HeroSection = () => {
       {/* Content */}
       <div className="container px-4 mx-auto text-center relative z-10">
         <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
-          {/* Cyberpunk Avatar with real photo */}
-          <div className="mx-auto w-44 h-44 mb-6 relative animate-float">
+          {/* Cyberpunk Avatar with real photo - enlarged */}
+          <div className="mx-auto w-56 h-56 mb-6 relative animate-float">
             <div className="absolute inset-0 bg-gradient-cyber rounded-full opacity-50 animate-pulse"></div>
             <div className="absolute inset-1 bg-cyber-darker rounded-full flex items-center justify-center overflow-hidden">
-              <Avatar className="w-40 h-40 border-2 border-cyber-purple">
+              <Avatar className="w-52 h-52 border-2 border-cyber-purple">
                 <AvatarImage src="/lovable-uploads/c9af53af-f56e-47df-8fa5-41b74d63ae64.png" alt="Prachit Regmi" />
                 <AvatarFallback className="bg-cyber-darker text-cyber-purple">
                   <Terminal size={56} className="text-cyber-purple animate-glow-pulse" />
