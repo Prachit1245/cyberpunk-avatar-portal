@@ -1,17 +1,15 @@
-export default defineConfig(({ mode }) => ({
-  base: "/cyberpunk-avatar-portal/", 
-  server: {
-    host: "::",
-    port: 8080,
-  },
-  plugins: [
-    react(),
-    mode === 'development' && componentTagger(),
-  ].filter(Boolean),
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
-}));
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
+export default defineConfig({
+  base: "/cyberpunk-avatar-portal/", // Ensure this matches your repo name
+  plugins: [react()],
+  build: {
+    outDir: "dist",
+  },
+  server: {
+    host: true,
+    strictPort: true,
+    hmr: false, // Disable Hot Module Replacement for GitHub Pages
+  },
+});
