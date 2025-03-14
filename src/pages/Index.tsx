@@ -7,6 +7,7 @@ import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import MatrixRain from '@/components/MatrixRain';
 
 const Index = () => {
   const [loading, setLoading] = useState(true);
@@ -37,14 +38,25 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen bg-cyber-dark text-white">
-      <Header />
-      <HeroSection />
-      <AboutMe />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
+    <div className="min-h-screen bg-cyber-dark text-white relative">
+      {/* The MatrixRain component is now added as a global background */}
+      <div className="fixed inset-0 z-0 opacity-30">
+        <MatrixRain />
+      </div>
+      
+      {/* Overlay grid for better readability */}
+      <div className="fixed inset-0 bg-cyber-grid bg-cyber-grid-size opacity-10 z-0"></div>
+      
+      {/* Main content */}
+      <div className="relative z-10">
+        <Header />
+        <HeroSection />
+        <AboutMe />
+        <Skills />
+        <Projects />
+        <Contact />
+        <Footer />
+      </div>
     </div>
   );
 };
