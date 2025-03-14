@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Terminal, ChevronDown } from 'lucide-react';
 import MatrixRain from './MatrixRain';
+import { Avatar, AvatarImage, AvatarFallback } from './ui/avatar';
 
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -41,11 +42,16 @@ const HeroSection = () => {
       {/* Content */}
       <div className="container px-4 mx-auto text-center relative z-10">
         <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
-          {/* Cyberpunk Avatar (Placeholder) */}
+          {/* Cyberpunk Avatar with real photo */}
           <div className="mx-auto w-44 h-44 mb-6 relative animate-float">
             <div className="absolute inset-0 bg-gradient-cyber rounded-full opacity-50 animate-pulse"></div>
             <div className="absolute inset-1 bg-cyber-darker rounded-full flex items-center justify-center overflow-hidden">
-              <Terminal size={56} className="text-cyber-purple animate-glow-pulse" />
+              <Avatar className="w-40 h-40 border-2 border-cyber-purple">
+                <AvatarImage src="/lovable-uploads/c9af53af-f56e-47df-8fa5-41b74d63ae64.png" alt="Prachit Regmi" />
+                <AvatarFallback className="bg-cyber-darker text-cyber-purple">
+                  <Terminal size={56} className="text-cyber-purple animate-glow-pulse" />
+                </AvatarFallback>
+              </Avatar>
             </div>
             <div className="absolute -inset-1 border border-cyber-purple rounded-full opacity-50"></div>
             <div className="absolute -inset-3 border border-cyber-blue rounded-full opacity-30"></div>
