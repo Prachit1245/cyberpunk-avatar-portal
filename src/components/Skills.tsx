@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Shield, Terminal, Code, Database, Cpu, Laptop } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
@@ -175,7 +176,10 @@ const Skills = () => {
                     <div className="absolute inset-0 bg-[length:10px_10px] bg-[linear-gradient(45deg,rgba(255,255,255,0.1)_25%,transparent_25%,transparent_50%,rgba(255,255,255,0.1)_50%,rgba(255,255,255,0.1)_75%,transparent_75%,transparent)]"></div>
                     <Progress 
                       value={skill.progress} 
-                      className={`h-full border-none bg-transparent bg-gradient-to-r ${skill.color}`}
+                      className={`h-full border-none bg-transparent`}
+                      style={{ 
+                        backgroundImage: `linear-gradient(to right, var(--${skill.color.split('-')[1]}-500), var(--${skill.color.split('-')[3]}-500))` 
+                      }}
                     />
                   </div>
                   
