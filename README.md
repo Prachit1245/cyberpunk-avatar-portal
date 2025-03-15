@@ -1,3 +1,4 @@
+
 # Welcome to your Lovable project
 
 ## Project info
@@ -52,7 +53,7 @@ npm run dev
 
 ## What technologies are used for this project?
 
-This project is built with .
+This project is built with:
 
 - Vite
 - TypeScript
@@ -62,7 +63,11 @@ This project is built with .
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/3fb45405-10ad-4b3f-9954-334487667c4d) and click on Share -> Publish.
+### GitHub Pages Deployment
+
+This project is configured to automatically deploy to GitHub Pages when you push to the main branch. You can visit your deployed site at https://yourusername.github.io/cyberpunk-avatar-portal/
+
+If you need to manually trigger a deployment, you can go to the Actions tab in your GitHub repository and run the "Deploy React App to GitHub Pages" workflow manually.
 
 ## I want to use a custom domain - is that possible?
 
